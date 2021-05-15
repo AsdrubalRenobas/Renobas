@@ -1,0 +1,64 @@
+<div class="split-screen">
+  <div class="left">
+    <section class="copy">
+      <h1>¡Nos alegra que estés acá!</h1>
+      <p>Empieza a hacer el cambio con Nosotros</p>
+      <a class="boton_personalizado" data-toggle='popover' data-placement='bottom' title='Contraseña' data-content='Si tienes problemas o quieres cambiar la clave comunícate por WhatsApp o escríbenos a cultura@renobas.com para realizar el proceso.'>Ayuda</a>
+
+    </section>
+  </div> 
+  <div class="right">
+    <form class="login2" action="/signin" method="POST" onsubmit="return empieza();">
+        <section class="copy">
+          <h2>Ingresa</h2>
+          <div class="login-container">
+            <p>Saludos te deseamos</p>
+          </div>
+        </section>
+        <div class="input-container name">
+          <label for="fname">Usuario</label>
+          <input id="usuario" name="username" type="text" placeholder="Recuerda tu Usuario">
+        </div>
+
+         <div class="input-container password">
+          <label for="password">Clave</label>
+          <input id="clave" name="pass" type="password" placeholder="Recuerda tu Clave">
+          <i><span style="cursor:pointer">Mostrar</span></i>
+        </div>
+       <button class="btnLogin">Ingresar</button>
+    </form>
+  </div> 
+</div>
+
+<script>
+   $(document).ready(function () {
+        $('[data-toggle="popover"]').popover();
+    });
+
+     document.querySelector('.password span').addEventListener('click', e => {
+    const passwordInput = document.querySelector('#clave');
+    if (e.target.classList.contains('show')) {
+        e.target.classList.remove('show');
+        e.target.textContent = 'Ocultar';
+        passwordInput.type = 'text';
+    } else {
+        e.target.classList.add('show');
+        e.target.textContent = 'Mostrar';
+        passwordInput.type = 'password';
+    }
+});
+    function empieza() {
+        var usuario,clave,correo, expresion;
+        usuario = document.getElementById("usuario").value;
+        clave = document.getElementById("clave").value;
+        if(usuario === "" || clave === ""){
+          swal.fire({
+            title:"Error",
+            text: "Todos los campos son obligatorios",
+            timer: 3000,
+            showConfirmButton: false
+          });
+            return false;
+        }
+    }
+</script>
