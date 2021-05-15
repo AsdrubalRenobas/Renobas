@@ -357,24 +357,39 @@
         description = document.getElementById("description").value;
     
         if(title === "" || encargado === "" || tel === "" || barrio === ""|| description === ""){
-           Swal.fire({
-                icon: 'error',
-                title: 'Error',
-                text: 'Te faltan datos por llenar',
-                footer: '<a href="/links">No quiero cambiar Nada</a>'
+           swal.fire({
+            title:"FALTAN",
+            text: "DATOS POR LLENAR",
+            timer: 3000,
+            showConfirmButton: false
             })
             return false;
         }
         else if(encargado.length>30){
-           Swal.fire('El nombre esta muy largo')
+            swal.fire({
+            title:"Nombre",
+            text: "ES MUY EXTENSO",
+            timer: 3000,
+            showConfirmButton: false
+            })
             return false;
         }
         else if(tel.length>10 || tel.length<7){
-             Swal.fire('El numero no es valido')
+            swal.fire({
+            title:"Teléfono",
+            text: "NO ES VALIDO",
+            timer: 3000,
+            showConfirmButton: false
+            })
             return false;
         }
         else if(isNaN(tel)){
-            Swal.fire('El telefono ingresado no es un numero')
+           swal.fire({
+            title:"Teléfono",
+            text: "NO ES VALIDO",
+            timer: 3000,
+            showConfirmButton: false
+            })
             return false;
         }
     }

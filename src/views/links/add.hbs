@@ -369,34 +369,38 @@
             return false;
         }
         else if(encargado.length>30){
-             Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'El nombre esta muy largo',
+           swal.fire({
+            title:"Nombre",
+            text: "ES MUY EXTENSO",
+            timer: 3000,
+            showConfirmButton: false
             })
             return false;
         }
          else if(encargado.length<3){
-             Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'El nombre esta muy corto',
+            swal.fire({
+            title:"Nombre",
+            text: "ES MUY CORTO",
+            timer: 3000,
+            showConfirmButton: false
             })
             return false;
         }
         else if(tel.length>10 || tel.length<7){
-            Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'El numero no es valido',
+           swal.fire({
+            title:"Teléfono",
+            text: "NO ES VALIDO",
+            timer: 3000,
+            showConfirmButton: false
             })
             return false;
         }
         else if(isNaN(tel)){
-            Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'El telefono ingresado no es un numero',
+           swal.fire({
+            title:"Teléfono",
+            text: "NO ES VALIDO",
+            timer: 3000,
+            showConfirmButton: false
             })
             return false;
         }
