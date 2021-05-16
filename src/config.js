@@ -6,7 +6,7 @@ config();
 
 export default {
   database: {
-    connectionLimit: 10,
+    connectionLimit: 1000,
     host: process.env.DATABASE_HOST || "localhost",
     user: process.env.DATABASE_USER || "root",
     password: process.env.DATABASE_PASSWORD || "",
