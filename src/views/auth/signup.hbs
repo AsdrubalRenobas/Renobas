@@ -3,16 +3,13 @@
     <section class="copy">
       <h1>¡Nos alegra que estés acá!</h1>
       <p>Empieza a hacer el cambio con Nosotros</p>
-      <a class="boton_personalizado" data-toggle='popover' data-placement='bottom' title='Crear un usuario' data-content='Un usuario debe de tener entre 5 y 16 letras, números o símbolos. La clave entre 4 y 10 números, letras o símbolos, Anotala o recuérdala muy bien. Escribe tu Email para darte información y por último acepta la comunicación entre usted y nosotros.'>Ayuda</a>
+      <a class="boton_personalizado" data-toggle='popover' data-placement='bottom' data-content='Un usuario debe de tener entre 5 y 16 letras, números o símbolos. La clave entre 4 y 10 números, letras o símbolos, Anotala o recuérdala muy bien. Escribe tu Email para darte información y por último acepta Términos y condiciones.'>Ayuda</a>
     </section>
   </div> 
   <div class="right">
     <form class="login2" action="/signup" method="POST" onsubmit="return empieza();">
         <section class="copy">
           <h2>Regístrate</h2>
-          <div class="login-container">
-            <p>Saludos te deseamos</p>
-          </div>
         </section>
         <div class="input-container name">
           <label for="fname">Usuario</label>
@@ -33,7 +30,7 @@
           <label class="checkbox-container">
             <input type="checkbox" name="test" id="test">
             <span class="checkmark"></span>
-            ¿Aceptas la comunicación?
+            ¿Aceptas Términos y condiciones?
           </label>
         </div>
        <button class="btnLogin">Registrarse</button>
@@ -124,7 +121,7 @@
         if(!isChecked){
            swal.fire({
             title:"Error",
-          text: 'No Aceptaste la comunicación',
+          text: 'No Aceptaste Términos y Condiciones',
             timer: 3000,
             showConfirmButton: false
             })

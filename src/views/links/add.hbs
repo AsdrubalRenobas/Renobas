@@ -2,8 +2,7 @@
 <div class="contact-wrapper animated bounceInUp">
             <div class ="contact-form">
                 <h3>Realiza tu pedido</h3>
-
-                   <form action="/links/add" method="POST" onsubmit="return validar();">
+                   <form action="/links/add" class="fomulario" method="POST" onsubmit="return validar();">
                     <p>
                         <label>Recolecta</label>
                         <select id="title" class="barrio" name="title">
@@ -18,11 +17,11 @@
                     </p>
                     <p>
                         <label>¿A nombre de Quién?</label>
-                        <input id="encargado" type= "text" name ="encargado" placeholder= "Nombre y Apellido" >
+                        <input id="encargado" type="text" name="encargado" class="encargado" placeholder="Nombre y Apellido" >
                     </p>
                     <p>
                         <label>Número telefónico</label>
-                        <input id="tel" type ="text" name= "tel" placeholder= "Telefono o Celular de la persona encargada" >
+                        <input id="tel" type="text" name="tel" class="tel" placeholder= "Telefono o Celular de la persona encargada" >
                     </p>
                      <p>
                         <label>Localidad</label>
@@ -325,10 +324,10 @@
                     </p>
                     <p class= "block">
                        <label>Materiales/Elementos</label> 
-                        <textarea id="description" name= "description" rows= "2" placeholder= "Escribe los materiales que tienes para la recolección. ejemplo: Botellas plasticas, Aluminio, llantas, aceite, Libros, periocos"></textarea>
+                        <textarea id="description" class="descrip" name="description" rows="2" placeholder= "Escribe los materiales que tienes para la recolección. ejemplo: Botellas plasticas, Aluminio, llantas, aceite, Libros, periocos"></textarea>
                     </p>
-                    <p class= "block">
-                        <button>
+                    <p class="block">
+                        <button class="botonRecolectas">
                             Recolectar
                         </button>
                     </p>
@@ -336,15 +335,15 @@
             </div>
             <div class="contact-info">
                 <p><a class="atras"  href="/links">No quiero crear Nada</a></p>
-                <h4>Proceso de Creación</h4>
+                <h4 class="titulo2">Proceso de Creación</h4>
                 <ul class="infor">
-                    <p>Haces un pedido para que vayan a recoger los Elementos que tú reciclaste. llenando la información que te piden.</p>
+                    <p>Haces un pedido para que vayan a recoger los Elementos que tú reciclaste. Llenando la información que te pedimos.</p>
                     <p>Puedes hacer tus preguntas por medio de:</p>
                      <li><i class="fab fa-whatsapp"></i> +57 3246461388</li>
                     <li><i class="fas fa-envelope-open-text"></i> cultura@renobas.com</li>
                 </ul>
-                <p>Te contactaremos por mensaje, acordamos un día en específico y recolectamos tus materiales.</p>
-                <p>!GRACIAS POR HACER PARTE DE LA CULTURA RENOBAS¡</p>
+                <p class="info">Te contactaremos por mensaje, acordamos un día en específico y recolectamos tus materiales.</p>
+                <p class="info">!GRACIAS POR HACER PARTE DE LA CULTURA RENOBAS¡</p>
                 
                 
             </div>

@@ -3,7 +3,7 @@
         <section class="textos-header">
             <h1>Te Damos la Bienvenida {{user.username}}</h1>
             <h2>Empieza a realizar tus recolectas para cuidar el planeta.</h2>
-            <a href="/links" class="btn btn-primary m-4">Empieza</a>
+            <a href="/links" class="btn btn-primary m-4 empieza">Empieza</a>
         </section>
         <div>
 <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -36,14 +36,13 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
         <section class="portafolio">
             <div class="contenedor">
                <h2 class="titulo">Proceso Renobas</h2>
-            <div class="contenedor-sobre-nosotros">
-                <div class="contenido-textos">
-                    <p>Renobas, recolecta mayor parte de los elementos reciclables que las personas tengan a su disposicion y quieran accionar de forma positiva, al desecho de esos elementos.</p>
-                    <p><span>@</span>Para tener conocimiento de elementos reciclables puedes encontrarnos en las redes sociales de Instagram y Twitter. Allí hay gran información sobre la preservación del planeta.</p>
-                    <p>Suiza ocupa el primer lugar, seguido de Australia, Alemania, Países Bajos y Noruega. Nosotros al ser un país tercermundista también podemos hacer un gran cambio.</p>
-                </div>
-                <img src="img/world.svg" alt="">
-            </div>
+                <div class="contenedor-sobre-nosotros">
+                    <div class="contenido-textos">
+                        <p>Renobas, recolecta mayor parte de los elementos reciclables que las personas tengan a su disposición y quieran accionar de forma positiva, al desecho de esos elementos.</p>
+                        <p><span>@</span>Para tener conocimiento de elementos reciclables puedes encontrarnos en las redes sociales de Instagram y Twitter. Allí hay gran información sobre la preservación del planeta.</p>
+                        <p>Suiza ocupa el primer lugar, seguido de Australia, Alemania, Países Bajos y Noruega. Nosotros al ser un país tercermundista también podemos hacer un gran cambio.</p>
+                    </div>
+                    <img src="img/world.svg" alt="">
                 </div>
             </div>
         </section>
@@ -52,8 +51,8 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                 <img src="img/naturaleza.svg" alt="">
                 <div class="contenido-textos">
                     <p><span>4</span>Recicla gran cantidad de elementos.</p>
-                    <p><span>5</span>Cuando los tengas realiza un pedido con nosotros, mediante la plataforma de Renobas la cual ya estas Registrado.</p>
-                    <p><span>6</span>Presiona el boton <strong>"EMPIEZA"</strong> despues preciona el boton. <span>¡</span> En la parte inferior Izquierda. Desde Allí realizas tus recolectas.</p>
+                    <p><span>5</span>Cuando los tengas realiza un pedido con nosotros, mediante la plataforma de Renobas la cual ya estás Registrado.</p>
+                    <p><span>6</span>Presiona el botón <strong>"EMPIEZA"</strong> después preciona el botón. <span>¡</span> En la parte inferior Izquierda. Desde Allí realizas tus recolectas.</p>
                     <p>“Puede decir lo avanzada que es una sociedad por la cantidad de basura que recicla” -- Dhyani Ywahoo</p>
                 </div>
             </div>
@@ -66,7 +65,7 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                     <div class="servicio-ind">
                         <img src="img/phone.svg" alt="">
                          <h3>Medio Telefónico</h3>
-                        <p>Tienes tu Celular para comunicarte con nosotros mediante Whatsapp, seguramente te estaremos resolviendo tus dudas.</p>
+                        <p>Tienes tu Celular para comunicarte con nosotros mediante WhatsApp, allí te estaremos resolviendo tus dudas.</p>
                        
                     </div>
                     <div class="servicio-ind">
@@ -95,9 +94,9 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                     <div class="modal-body">
                       
                        <form id="form1" class="login2" action="mailto:cultura@renobas.com?subject=INFORMACIÓN SOLICITADA" method="post" enctype="text/plain">
-                              <div id="alertSI" class="alert alert-success alert-dismissible fade show" role="alert">Valídelo en su correo para comunicarse con nosotros.</div>
-                              <div id="alertNO" class="alert alert-danger" role="alert">Complete los datos para enviarlo.</div>
-                              <div id="TelMalo" class="alert alert-danger alert-dismissible fade show" role="alert">Revisa tu TELEFONO.</div>
+                              <div id="alertSI" class="alert alert-primary alert-dismissible fade show noticia" role="alert">Valídelo en su correo para comunicarse con nosotros.</div>
+                              <div id="alertNO" class="alert alert-danger alert-dismissible fade show noticia" role="alert">Complete los datos para enviarlo.</div>
+                              <div id="TelMalo" class="alert alert-danger alert-dismissible fade show noticia" role="alert">Revisa tu teléfono.</div>
                               
                               <div class="input-container name">
                                 
@@ -113,7 +112,6 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                                 
                                 <input id="telefono" type="text" name="Telefono" placeholder="Escribe tu Teléfono">
                               </div>
-                              <label>Mensaje</label>
                               <div class="input-container tipo">
                                  <select id="tipo" class="barrio" name="tipo">
                                     <option hidden selected value="" >Selecciona el tipo de mensaje</option>
@@ -127,14 +125,14 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                               </div>
                              <div class="input-group ContactoMensaje">
                                   
-                                      <textarea id="mensaje" name="Comentario" type="text" class="form-control" aria-label="With textarea"></textarea>
+                                      <textarea id="mensaje" name="Comentario" type="text" class="form-control escritos" aria-label="With textarea"></textarea>
                                       <div class="input-group-prepend">
-                                      <span class="input-group-text">Cuéntanos</span>
+                                      <span class="input-group-text cuentanos">Cuéntanos</span>
                                     </div>
                               </div>
                             <div>
-                                  <button type="submit" value="Send" class="btn btn-primary">Enviar</button>
-                                  <button type="reset" value="Reset" class="btn btn-secondary">Eliminar</button>
+                                  <button type="submit" value="Send" class="btn btn-primary empieza">Enviar</button>
+                                  <button type="reset" value="Reset" class="btn btn-secondary empieza">Eliminar</button>
 
                             </div>
                           </form>
@@ -146,7 +144,7 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
     </main>
     <div class="containeRedes">
         <input type="checkbox" id="btn-mas">
-        <div class="redes">
+        <div class="redes btn-mas">
             <a href="https://wa.link/ryiryy" target="_blank" class="fab fa-whatsapp" title="WhatsApp"></a>
             <a href="#" class="fa fa-envelope" data-toggle="modal" data-target="#exampleModalCenterContact" title="Escríbenos"></a>
             <a href="https://twitter.com/Cultura_Renobas" target="_blank" class="fab fa-twitter" title="Twitter"></a>
@@ -163,11 +161,10 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <div class="container-body">
                 <div class="colum1">
                   <h1>¿Que haces con Nosotros?</h1>
-                   <p>En este momento tú como usuario {{user.username}} estas incluid@ en una comunidad la cual se preocupa por este planeta, estas con nosotros porque piensas que el mundo puede tener un futuro Eco sostenible. Y limpio para futuras generaciones, desde ahora empieza a hacer el cambio desde tu casa y después se vera reflejado en el planeta.</p>
+                   <p>En este momento tú como usuario {{user.username}} estas incluid@ en una comunidad la cual se preocupa por este planeta, estas con nosotros porque piensas que el mundo puede tener un futuro Eco sostenible. Y limpio para futuras generaciones, desde ahora empieza a hacer el cambio desde tu casa y después se verá reflejado en el planeta.</p>
                 </div>
                 <div class="colum2">
-                   <img src="img/logoS.png">
-                   
+                     <img src="img/logo.png" >
                 </div>
                 
             </div>

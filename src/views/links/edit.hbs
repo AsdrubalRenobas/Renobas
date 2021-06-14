@@ -1,8 +1,8 @@
 
 <div class="contact-wrapper animated bounceInUp">
-            <div class ="contact-form">
+            <div class="contact-form">
                 <h3>Cambia los datos de tu pedido</h3>
-                 <form action="/links/edit/{{link.id}}" method="POST" onsubmit="return validar();">
+                 <form action="/links/edit/{{link.id}}" class="fomulario" method="POST" onsubmit="return validar();">
                     <p>
                         <label>Recolecta</label>
                         <select class= "barrio" name= "title" id="title">
@@ -18,11 +18,11 @@
                     </p>
                     <p>
                         <label>¿A nombre de Quien?</label>
-                        <input type= "text" name ="encargado" id="encargado" placeholder="{{link.encargado}} Era el/la Encargado@" value="{{link.encargado}}">
+                        <input type= "text" name ="encargado" id="encargado" class="encargado" placeholder="{{link.encargado}} Era el/la Encargado@" value="{{link.encargado}}">
                     </p>
                     <p>
                         <label>Número telefónico</label>
-                        <input type ="text" name= "tel" id="tel" placeholder="{{link.tel}} Era el numero de {{link.encargado}}" value="{{link.tel}}">
+                        <input type ="text" name= "tel" id="tel"  class="tel" placeholder="{{link.tel}} Era el número de {{link.encargado}}" value="{{link.tel}}">
                     </p>
                      <p>
                         <label>Localidad</label>
@@ -325,7 +325,7 @@
                     </p>
                     <p class= "block">
                        <label>Materiales/Elementos</label> 
-                        <textarea name= "description" id="description" rows= "2" placeholder= "Escribe los materiales que tienes para la recolección. ejemplo: Botellas plasticas, Aluminio, llantas, aceite, Libros, periocos">{{link.description}}</textarea>
+                        <textarea name= "description" class="descrip" id="description" rows= "2" placeholder= "Escribe los materiales que tienes para la recolección. ejemplo: Botellas plasticas, Aluminio, llantas, aceite, Libros, periocos">{{link.description}}</textarea>
                     </p>
                    <p class= "block">
                         <button>
@@ -336,15 +336,15 @@
             </div>
             <div class= "contact-info">
                 <p><a class="atras" href="/links">No quiero cambiar Nada</a></p>
-                <h4>Proceso de Cambio</h4>
+                <h4 class="titulo2">Proceso de Cambio</h4>
                 <ul class="infor">
                     <p>Cambia la toda la información que quieras, debes volver a escribir el nombre de la persona encargada y el numero de esa persona. </p>
                     <p>Puedes hacer tus preguntas por medio de:</p>
                     <li><i class="fab fa-whatsapp"></i> +57 3246461388</li>
                     <li><i class="fas fa-envelope-open-text"></i> cultura@renobas.com</li>
                 </ul>
-                <p>Después te contactaremos por mensaje, acordamos un día en específico y recolectamos tus materiales.</p>
-               <p>!! GRACIAS POR HACER PARTE DE LA CULTURA RENOBAS ¡¡</p>
+                <p class="info">Después te contactaremos por mensaje, acordamos un día en específico y recolectamos tus materiales.</p>
+               <p class="info">!! GRACIAS POR HACER PARTE DE LA CULTURA RENOBAS ¡¡</p>
             </div>
         </div>
 <script>
