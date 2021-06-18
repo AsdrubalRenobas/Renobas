@@ -300,7 +300,7 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                 </div>
             </div>
         </section>
-
+          <!-- Modal Metales 
               <div class="modal fade" id="exampleModalCenterContact" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
@@ -312,6 +312,7 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                     </div>
                     <div class="modal-body">
                       
+                        
                         <form id="form1" class="login2" action="mailto:cultura@renobas.com?subject=INFORMACIÓN SOLICITADA" method="post" enctype="text/plain">
                               <div id="alertSI" class="alert alert-primary alert-dismissible fade show noticia" role="alert">Valídelo en su correo para comunicarse con nosotros. Te responderemos en un lapso de tiempo de (8) días, puedes adjuntar archivos.</div>
                               <div id="alertNO" class="alert alert-danger alert-dismissible fade show noticia" role="alert">Complete los datos para enviarlo.</div>
@@ -354,12 +355,13 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                                   <button type="submit" value="Send" class="btn btn-primary empieza">Enviar</button>
                                   <button type="reset" value="Reset" class="btn btn-secondary empieza">Eliminar</button>
                             </div>
-                          </form>
+                      </form>
                             
                     </div>
                   </div>
                 </div>
               </div>
+            -->
 
 
     </main>
@@ -367,7 +369,10 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
         <input type="checkbox" id="btn-mas">
         <div class="redes btn-mas">
             <a href="https://wa.link/ryiryy" target="_blank" class="fab fa-whatsapp" title="WhatsApp"></a>
-            <a href="#" class="fa fa-envelope" data-toggle="modal" data-target="#exampleModalCenterContact" title="Escríbenos"></a>
+            <a href="mailto:cultura@renobas.com?subject=INFORMACIÓN SOLICITADA" class="fa fa-envelope" title="Email"></a>
+            <!--
+              <a href="#" class="fa fa-envelope" data-toggle="modal" data-target="#exampleModalCenterContact" title="Escríbenos"></a>
+             -->
             <a href="https://twitter.com/Cultura_Renobas" target="_blank" class="fab fa-twitter" title="Twitter"></a>
             <a href="https://instagram.com/cultura_renobas?igshid=1dxj43gigp252" target="_blank" class="fab fa-instagram" title="Instagram"></a>
         </div>
@@ -425,50 +430,13 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                     <p class="terminos">En la máxima medida permitida por la ley aplicable, en ningún caso Renobas será responsable por daños indirectos, punitivos, incidentales, especiales, consecuentes o ejemplares, incluidos, entre otros, daños por pérdida de beneficios, buena voluntad, uso, datos. u otras pérdidas intangibles, que surjan de o estén relacionadas con el uso o la imposibilidad de utilizar el servicio.</p>
                     <p class="terminos"><strong>Emails de información y noticias</strong></p>
                     <p class="terminos">Acepta recibir de vez en cuando nuestros mensajes y materiales de informacón, por correo electrónico o cualquier otro formulario de contacto que nos proporciones (incluido tu número de teléfono para llamadas o mensajes de texto).</p>
-                    
                 </div>
             </div>
           </div>
-        </div>
-            
-            
+        </div> 
     </footer>
-    
 </main>
 <script>
-    $(document).ready(function() {        
-      $("#alertSI").hide();
-      $("#alertNO").hide();
-      $("#TelMalo").hide();
-       $("#form1").submit(function(e){
-        user = $.trim($("#nombre").val());
-        pass = $.trim($("#correo").val());
-        tel =  $.trim($("#telefono").val());
-        tipo =  $.trim($("#tipo").val());
-        mes =  $.trim($("#mensaje").val());
-        if(user.length > 0 && pass.length > 0 && tel.length > 0 && tipo.length > 0 && mes.length > 0){
-          if(tel.length>10 || tel.length<7){
-             $("#TelMalo").fadeTo(2000, 500).slideUp(500, function() {
-             $("#TelMalo").slideUp(500);
-          });
-          return false;
-          }else{          
-            $("#alertSI").fadeTo(3000, 2000).slideUp(600, function() {
-            $("#alertSI").slideUp(2000);
-            location.reload();
-            });     
-            return true;
-          }    
-        }else{
-          $("#alertNO").fadeTo(2000, 500).slideUp(500, function() {
-             $("#alertNO").slideUp(500);
-          });
-          return false;
-        }
-        });   
-      });
-
-      
-       
+   //Las validaciones JS estan en validaciones.js
 </script>
 

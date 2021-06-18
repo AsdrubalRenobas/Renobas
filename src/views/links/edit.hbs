@@ -347,50 +347,52 @@
                <p class="info">!! GRACIAS POR HACER PARTE DE LA CULTURA RENOBAS ¡¡</p>
             </div>
         </div>
-<script>
-    function validar() {
-        var title, encargado, tel, barrio, description, expresion;
-        title = document.getElementById("title").value;
-        encargado = document.getElementById("encargado").value;
-        tel = document.getElementById("tel").value;
-        barrio = document.getElementById("barrio").value;
-        description = document.getElementById("description").value;
+        <script>
+            function validar() {
+                 //Aca también. 
+                    var title, encargado, tel, barrio, description, expresion;
+                    title = document.getElementById("title").value;
+                    encargado = document.getElementById("encargado").value;
+                    tel = document.getElementById("tel").value;
+                    barrio = document.getElementById("barrio").value;
+                    description = document.getElementById("description").value;
+
+                    if(title === "" || encargado === "" || tel === "" || barrio === ""|| description === ""){
+                    swal.fire({
+                        title:"FALTAN",
+                        text: "DATOS POR LLENAR",
+                        timer: 3000,
+                        showConfirmButton: false
+                        })
+                        return false;
+                    }
+                    else if(encargado.length>30){
+                        swal.fire({
+                        title:"Nombre",
+                        text: "ES MUY EXTENSO",
+                        timer: 3000,
+                        showConfirmButton: false
+                        })
+                        return false;
+                    }
+                    else if(tel.length>10 || tel.length<7){
+                        swal.fire({
+                        title:"Teléfono",
+                        text: "NO ES VALIDO",
+                        timer: 3000,
+                        showConfirmButton: false
+                        })
+                        return false;
+                    }
+                    else if(isNaN(tel)){
+                    swal.fire({
+                        title:"Teléfono",
+                        text: "NO ES VALIDO",
+                        timer: 3000,
+                        showConfirmButton: false
+                        })
+                        return false;
+                    }
+                }
+        </script>
     
-        if(title === "" || encargado === "" || tel === "" || barrio === ""|| description === ""){
-           swal.fire({
-            title:"FALTAN",
-            text: "DATOS POR LLENAR",
-            timer: 3000,
-            showConfirmButton: false
-            })
-            return false;
-        }
-        else if(encargado.length>30){
-            swal.fire({
-            title:"Nombre",
-            text: "ES MUY EXTENSO",
-            timer: 3000,
-            showConfirmButton: false
-            })
-            return false;
-        }
-        else if(tel.length>10 || tel.length<7){
-            swal.fire({
-            title:"Teléfono",
-            text: "NO ES VALIDO",
-            timer: 3000,
-            showConfirmButton: false
-            })
-            return false;
-        }
-        else if(isNaN(tel)){
-           swal.fire({
-            title:"Teléfono",
-            text: "NO ES VALIDO",
-            timer: 3000,
-            showConfirmButton: false
-            })
-            return false;
-        }
-    }
-</script>
