@@ -1241,3 +1241,9 @@ label{
   width: 65vh;
   height: 43vh;
 }
+
+.video{
+  display: flex;
+  justify-content: center;
+
+}
