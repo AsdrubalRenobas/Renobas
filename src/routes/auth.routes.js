@@ -9,14 +9,15 @@ import {
   logout,
 } from "../controllers/auth.controller";
 
-// SIGNUP
+// Registro
 router.get("/signup", renderSignUp);
 router.post("/signup", signUp);
 
-// SINGIN
+// Inicio de Sesion
 router.get("/signin", renderSignIn);
 router.post("/signin", signIn);
 
+//Salir
 router.get("/logout", logout);
 
 export default router;

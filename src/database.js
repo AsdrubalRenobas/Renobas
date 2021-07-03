@@ -2,6 +2,7 @@ import mysql from "mysql";
 import { promisify } from "util";
 import config from "./config";
 
+//Llamo la configuración de la base de datos.
 const { database } = config;
 
 const pool = mysql.createPool(database);

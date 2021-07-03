@@ -10,10 +10,10 @@ import {
 } from "../controllers/links.controller";
 
 const router = Router();
-// Authorization
+// Autorización
 router.use(isLoggedIn);
 
-// Routes
+// Rutas de las recolectas
 router.get("/add", renderAddLink);
 router.post("/add", addLink);
 router.get("/", isLoggedIn, renderLinks);

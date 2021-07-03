@@ -1,399 +1,401 @@
+<!-- Vista Para agregar Recolectas -->
 <div class="contact-wrapper animated bounceInUp">
-            <div class ="contact-form">
-                <h3>Realiza tu Recolecta</h3>
-                   <form action="/links/add" class="fomulario" method="POST" onsubmit="return validar();">
-                    <p>
-                        <label>Recolecta</label>
-                        <select id="title" class="barrio" name="title">
-                              <option hidden selected value="">Selecciona el material reciclado</option>
-                                <option>Metales</option>
-                                <option>Plásticos</option>
-                                <option>Papel</option>
-                                <option>Tecnológicos</option>
-                                <option>Otros Importantes</option>
-                                 <option>De todo</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label>¿A nombre de Quién?</label>
-                        <input id="encargado" type="text" name="encargado" class="encargado" placeholder="Nombre y Apellido" >
-                    </p>
-                    <p>
-                        <label>Número telefónico</label>
-                        <input id="tel" type="text" name="tel" class="tel" placeholder= "Telefono o Celular de la persona encargada" >
-                    </p>
-                     <p>
-                        <label>Localidad</label>
-                        <select id="barrio" class="barrio" name="barrio">
-                           <option hidden selected value="">Selecciona tu barrio</option>
-                            <optgroup label="Comuna 1 -Popular">
-                                <option>Popular 1-2</option>
-                                <option>Santo Domingo Sabio Nº 1</option>
-                                <option>Santo Domingo Sabio Nº 2</option>
-                                <option>Popular, Granizal</option>
-                                <option>Moscú Nº 2</option>
-                                <option>Villa Guadalupe</option>
-                                <option>San Pablo</option>
-                                <option>Aldea Pablo VI</option>
-                                <option>La Esperanza Nº 2</option>
-                                <option>El Compromiso</option>
-                                <option>La Avanzada</option>
-                                <option>Carpinelo</option>
-                            </optgroup>
-                            <optgroup label="Comuna 2 -Santa Cruz">
-                                <option>La Isla</option>
-                                <option>El Playón de Los Comuneros</option>
-                                <option>Pablo VI</option>
-                                <option>La Frontera</option>
-                                <option>La Francia</option>
-                                <option>Andalucía</option>
-                                <option>Villa del Socorro</option>
-                                <option>Villa Niza</option>
-                                <option>Moscú Nº 1</option>
-                                <option>Santa Cruz</option>
-                                <option>La Rosa</option>
-                            </optgroup>
-                            <optgroup label="Comuna 3 -Manrique">
-                                <option>La Salle</option>
-                                <option>Las Granjas</option>
-                                <option>Campo Valdes Nº 2</option>
-                                <option>Santa Inés</option>
-                                <option>El Raizal</option>
-                                <option>El Pomar</option>
-                                <option>Manrique Central Nº 2</option>
-                                <option>Manrique Oriental</option>
-                                <option>Versalles Nº 1</option>
-                                <option>Versalles Nº 2</option>
-                                <option>La Cruz</option>
-                                <option>La Honda</option>
-                                <option>Oriente</option>
-                                <option>Maria Cano – Carambolas</option>
-                                <option>San José La Cima Nº 1</option>
-                                <option>San José La Cima Nº 2</option>
-                            </optgroup>
-                             <optgroup label="Comuna 4 -Aranjuez">
-                                <option>Aranjuez</option>
-                                <option>Berlín</option>
-                                <option>San Isidro</option>
-                                <option>Palermo</option>
-                                <option>Bermejal - Los Álamos</option>
-                                <option>Moravia</option>
-                                <option>Sevilla</option>
-                                <option>San Pedro</option>
-                                <option>Manrique Central Nº 1</option>
-                                <option>Campo Valdes Nº 1</option>
-                                <option>Las Esmeraldas</option>
-                                <option>La Piñuela</option>
-                                <option>Brasilia</option>
-                                <option>Miranda</option>
-                            </optgroup>
-                            <optgroup label="Comuna 5 -Castilla">
-                                <option>Castilla</option>
-                                <option>Toscaza</option>
-                                <option>Las Brisas</option>
-                                <option>Florencia</option>
-                                <option>Tejelo</option>
-                                <option>Boyacá</option>
-                                <option>Héctor Abad Gómez</option>
-                                <option>Belalcazar</option>
-                                <option>Girardot</option>
-                                <option>Tricentenario</option>
-                                <option>Francisco Antonio Zea</option>
-                                <option>Alfonso López</option>
-                                <option>Caribe</option>
-                                <option>El Progreso</option>
-                            </optgroup>
-                            <optgroup label="Comuna 6 -Doce de Octubre">
-                                <option>Santander</option>
-                                <option>Doce de Octubre Nº 1</option>
-                                <option>Doce de Octubre Nº 2</option>
-                                <option>Pedregal</option>
-                                <option>La Esperanza</option>
-                                <option>San Martín de Porres</option>
-                                <option>Kennedy</option>
-                                <option>Picacho</option>
-                                <option>Picachito</option>
-                                <option>Mirador del Doce</option>
-                                <option>Progreso Nº 2</option>
-                                <option>El Triunfo</option>
-                            </optgroup>
-                            <optgroup label="Comuna 7 -Robledo">
-                                <option>Cerro El Volador</option>
-                                <option>San Germán</option>
-                                <option>Barrio Facultad de Minas</option>
-                                <option>La Pilarica</option>
-                                <option>Bosques de San Pablo</option>
-                                <option>Altamira</option>
-                                <option>Córdoba</option>
-                                <option>López de Mesa</option>
-                                <option>El Diamante</option>
-                                <option>Aures Nº 1</option>
-                                <option>Aures Nº 2</option>
-                                <option>Bello Horizonte</option>
-                                <option>Villa Flora</option>
-                                <option>Palenque</option>
-                                <option>Robledo</option>
-                                <option>Cucaracho</option>
-                                <option>Fuente Clara</option>
-                                <option>Santa Margarita</option>
-                                <option>Olaya Herrera</option>
-                                <option>Pajarito</option>
-                                <option>Monteclaro</option>
-                                <option>Nueva Villa de La Iguaná</option>
-                            </optgroup>
-                             <optgroup label="Comuna 8 -Villa Hermosa">
-                                <option>Villa Hermosa</option>
-                                <option>La Mansión</option>
-                                <option>San Miguel</option>
-                                <option>La Ladera</option>
-                                <option>Batallón Girardot</option>
-                                <option>Llanaditas</option>
-                                <option>Los Mangos</option>
-                                <option>Enciso</option>
-                                <option>Sucre</option>
-                                <option>El Pinal</option>
-                                <option>Trece de Noviembre</option>
-                                <option>La Libertad</option>
-                                <option>Villatina</option>
-                                <option>San Antonio</option>
-                                <option>Las Estancias</option>
-                                <option>Villa Turbay</option>
-                                <option>La Sierra (Santa Lucía - Las Estancias)</option>
-                                <option>Villa Lilliam</option>
-                                <option>Esfuerzos de Paz N°1</option>
-                                <option>Esfuerzos de Paz N°2</option>
-                            </optgroup>
-                             <optgroup label="Comuna 9 -Buenos Aires">
-                                <option>Juan Pablo II</option>
-                                <option>Barrios de Jesús</option>
-                                <option>Bomboná Nº 2</option>
-                                <option>Los Cerros El Vergel</option>
-                                <option>Alejandro Echevarria</option>
-                                <option>Barrio Caicedo</option>
-                                <option>Buenos Aires</option>
-                                <option>Miraflores</option>
-                                <option>Cataluña</option>
-                                <option>La Milagrosa</option>
-                                <option>Gerona</option>
-                                <option>El Salvador</option>
-                                <option>Loreto</option>
-                                <option>Asomadera Nº 1</option>
-                                <option>Asomadera Nº 2</option>
-                                <option>Asomadera Nº 3</option>
-                                <option>Ocho de Marzo</option>
-                            </optgroup>
-                            <optgroup label="Comuna 10 -La Candelaria">
-                                <option>Prado</option>
-                                <option>Jesús Nazareno</option>
-                                <option>El Chagualo</option>
-                                <option>Estación Villa</option>
-                                <option>San Benito</option>
-                                <option>Guayaquil</option>
-                                <option>Corazón de Jesús</option>
-                                <option>Calle Nueva</option>
-                                <option>Perpetuo Socorro</option>
-                                <option>Barrio Colón</option>
-                                <option>Las Palmas</option>
-                                <option>Bomboná Nº 1</option>
-                                <option>Boston</option>
-                                <option>Los Ángeles</option>
-                                <option>Villa Nueva</option>
-                                <option>La Candelaria</option>
-                                <option>San Diego</option>
-                            </optgroup>
+    <div class="contact-form">
+        <h3>Realiza tu Recolecta</h3>
+        <form action="/links/add" class="fomulario" method="POST" onsubmit="return validar();">
+            <p>
+                <label>Recolecta</label>
+                <select id="title" class="barrio" name="title">
+                    <option hidden selected value="">Selecciona el material reciclado</option>
+                    <option>Metales</option>
+                    <option>Plásticos</option>
+                    <option>Papel</option>
+                    <option>Tecnológicos</option>
+                    <option>Otros Importantes</option>
+                    <option>De todo</option>
+                </select>
+            </p>
+            <p>
+                <label>¿A nombre de Quién?</label>
+                <input id="encargado" type="text" name="encargado" class="encargado" placeholder="Nombre y Apellido">
+            </p>
+            <p>
+                <label>Número telefónico</label>
+                <input id="tel" type="text" name="tel" class="tel"
+                    placeholder="Telefono o Celular de la persona encargada">
+            </p>
+            <p>
+                <label>Localidad</label>
+                <select id="barrio" class="barrio" name="barrio">
+                    <option hidden selected value="">Selecciona tu barrio</option>
+                    <optgroup label="Comuna 1 -Popular">
+                        <option>Popular 1-2</option>
+                        <option>Santo Domingo Sabio Nº 1</option>
+                        <option>Santo Domingo Sabio Nº 2</option>
+                        <option>Popular, Granizal</option>
+                        <option>Moscú Nº 2</option>
+                        <option>Villa Guadalupe</option>
+                        <option>San Pablo</option>
+                        <option>Aldea Pablo VI</option>
+                        <option>La Esperanza Nº 2</option>
+                        <option>El Compromiso</option>
+                        <option>La Avanzada</option>
+                        <option>Carpinelo</option>
+                    </optgroup>
+                    <optgroup label="Comuna 2 -Santa Cruz">
+                        <option>La Isla</option>
+                        <option>El Playón de Los Comuneros</option>
+                        <option>Pablo VI</option>
+                        <option>La Frontera</option>
+                        <option>La Francia</option>
+                        <option>Andalucía</option>
+                        <option>Villa del Socorro</option>
+                        <option>Villa Niza</option>
+                        <option>Moscú Nº 1</option>
+                        <option>Santa Cruz</option>
+                        <option>La Rosa</option>
+                    </optgroup>
+                    <optgroup label="Comuna 3 -Manrique">
+                        <option>La Salle</option>
+                        <option>Las Granjas</option>
+                        <option>Campo Valdes Nº 2</option>
+                        <option>Santa Inés</option>
+                        <option>El Raizal</option>
+                        <option>El Pomar</option>
+                        <option>Manrique Central Nº 2</option>
+                        <option>Manrique Oriental</option>
+                        <option>Versalles Nº 1</option>
+                        <option>Versalles Nº 2</option>
+                        <option>La Cruz</option>
+                        <option>La Honda</option>
+                        <option>Oriente</option>
+                        <option>Maria Cano – Carambolas</option>
+                        <option>San José La Cima Nº 1</option>
+                        <option>San José La Cima Nº 2</option>
+                    </optgroup>
+                    <optgroup label="Comuna 4 -Aranjuez">
+                        <option>Aranjuez</option>
+                        <option>Berlín</option>
+                        <option>San Isidro</option>
+                        <option>Palermo</option>
+                        <option>Bermejal - Los Álamos</option>
+                        <option>Moravia</option>
+                        <option>Sevilla</option>
+                        <option>San Pedro</option>
+                        <option>Manrique Central Nº 1</option>
+                        <option>Campo Valdes Nº 1</option>
+                        <option>Las Esmeraldas</option>
+                        <option>La Piñuela</option>
+                        <option>Brasilia</option>
+                        <option>Miranda</option>
+                    </optgroup>
+                    <optgroup label="Comuna 5 -Castilla">
+                        <option>Castilla</option>
+                        <option>Toscaza</option>
+                        <option>Las Brisas</option>
+                        <option>Florencia</option>
+                        <option>Tejelo</option>
+                        <option>Boyacá</option>
+                        <option>Héctor Abad Gómez</option>
+                        <option>Belalcazar</option>
+                        <option>Girardot</option>
+                        <option>Tricentenario</option>
+                        <option>Francisco Antonio Zea</option>
+                        <option>Alfonso López</option>
+                        <option>Caribe</option>
+                        <option>El Progreso</option>
+                    </optgroup>
+                    <optgroup label="Comuna 6 -Doce de Octubre">
+                        <option>Santander</option>
+                        <option>Doce de Octubre Nº 1</option>
+                        <option>Doce de Octubre Nº 2</option>
+                        <option>Pedregal</option>
+                        <option>La Esperanza</option>
+                        <option>San Martín de Porres</option>
+                        <option>Kennedy</option>
+                        <option>Picacho</option>
+                        <option>Picachito</option>
+                        <option>Mirador del Doce</option>
+                        <option>Progreso Nº 2</option>
+                        <option>El Triunfo</option>
+                    </optgroup>
+                    <optgroup label="Comuna 7 -Robledo">
+                        <option>Cerro El Volador</option>
+                        <option>San Germán</option>
+                        <option>Barrio Facultad de Minas</option>
+                        <option>La Pilarica</option>
+                        <option>Bosques de San Pablo</option>
+                        <option>Altamira</option>
+                        <option>Córdoba</option>
+                        <option>López de Mesa</option>
+                        <option>El Diamante</option>
+                        <option>Aures Nº 1</option>
+                        <option>Aures Nº 2</option>
+                        <option>Bello Horizonte</option>
+                        <option>Villa Flora</option>
+                        <option>Palenque</option>
+                        <option>Robledo</option>
+                        <option>Cucaracho</option>
+                        <option>Fuente Clara</option>
+                        <option>Santa Margarita</option>
+                        <option>Olaya Herrera</option>
+                        <option>Pajarito</option>
+                        <option>Monteclaro</option>
+                        <option>Nueva Villa de La Iguaná</option>
+                    </optgroup>
+                    <optgroup label="Comuna 8 -Villa Hermosa">
+                        <option>Villa Hermosa</option>
+                        <option>La Mansión</option>
+                        <option>San Miguel</option>
+                        <option>La Ladera</option>
+                        <option>Batallón Girardot</option>
+                        <option>Llanaditas</option>
+                        <option>Los Mangos</option>
+                        <option>Enciso</option>
+                        <option>Sucre</option>
+                        <option>El Pinal</option>
+                        <option>Trece de Noviembre</option>
+                        <option>La Libertad</option>
+                        <option>Villatina</option>
+                        <option>San Antonio</option>
+                        <option>Las Estancias</option>
+                        <option>Villa Turbay</option>
+                        <option>La Sierra (Santa Lucía - Las Estancias)</option>
+                        <option>Villa Lilliam</option>
+                        <option>Esfuerzos de Paz N°1</option>
+                        <option>Esfuerzos de Paz N°2</option>
+                    </optgroup>
+                    <optgroup label="Comuna 9 -Buenos Aires">
+                        <option>Juan Pablo II</option>
+                        <option>Barrios de Jesús</option>
+                        <option>Bomboná Nº 2</option>
+                        <option>Los Cerros El Vergel</option>
+                        <option>Alejandro Echevarria</option>
+                        <option>Barrio Caicedo</option>
+                        <option>Buenos Aires</option>
+                        <option>Miraflores</option>
+                        <option>Cataluña</option>
+                        <option>La Milagrosa</option>
+                        <option>Gerona</option>
+                        <option>El Salvador</option>
+                        <option>Loreto</option>
+                        <option>Asomadera Nº 1</option>
+                        <option>Asomadera Nº 2</option>
+                        <option>Asomadera Nº 3</option>
+                        <option>Ocho de Marzo</option>
+                    </optgroup>
+                    <optgroup label="Comuna 10 -La Candelaria">
+                        <option>Prado</option>
+                        <option>Jesús Nazareno</option>
+                        <option>El Chagualo</option>
+                        <option>Estación Villa</option>
+                        <option>San Benito</option>
+                        <option>Guayaquil</option>
+                        <option>Corazón de Jesús</option>
+                        <option>Calle Nueva</option>
+                        <option>Perpetuo Socorro</option>
+                        <option>Barrio Colón</option>
+                        <option>Las Palmas</option>
+                        <option>Bomboná Nº 1</option>
+                        <option>Boston</option>
+                        <option>Los Ángeles</option>
+                        <option>Villa Nueva</option>
+                        <option>La Candelaria</option>
+                        <option>San Diego</option>
+                    </optgroup>
 
-                            <optgroup label="Comuna 11 -Laureles ESTADIO">
-                                <option>Carlos E. Restrepo</option>
-                                <option>Suramericana</option>
-                                <option>Naranjal</option>
-                                <option>San Joaquín</option>
-                                <option>Los Conquistadores</option>
-                                <option>Bolivariana</option>
-                                <option>Laureles</option>
-                                <option>Las Acacias</option>
-                                <option>La Castellana</option>
-                                <option>Lorena</option>
-                                <option>El Velódromo</option>
-                                <option>Estadio</option>
-                                <option>Los Colores</option>
-                                <option>Cuarta Brigada</option>
-                                <option>Florida Nueva</option>
-                            </optgroup>
-                             <optgroup label="Comuna 12 -La America">
-                                <option>Ferrini</option>
-                                <option>Calasanz</option>
-                                <option>Los Pinos</option>
-                                <option>La América</option>
-                                <option>La Floresta</option>
-                                <option>Santa Lucía</option>
-                                <option>El Danubio</option>
-                                <option>Campo Alegre</option>
-                                <option>Santa Mónica</option>
-                                <option>Barrio Cristóbal</option>
-                                <option>Simón Bolívar</option>
-                                <option>Santa Teresita</option>
-                                <option>Calasanz Parte Alta</option>
-                            </optgroup>
-                            <optgroup label="Comuna 13 -San Javier">
-                                <option>El Pesebre</option>
-                                <option>Blanquizal</option>
-                                <option>Santa Rosa de Lima</option>
-                                <option>Los Alcázares</option>
-                                <option>Metropolitano</option>
-                                <option>La Pradera</option>
-                                <option>Juan XIII - La Quiebra</option>
-                                <option>San Javier Nº 1</option>
-                                <option>San Javier Nº 2</option>
-                                <option>Veinte de Julio</option>
-                                <option>Belencito</option>
-                                <option>Betania</option>
-                                <option>El Corazón</option>
-                                <option>Las Independencias</option>
-                                <option>Nuevos Conquistadores</option>
-                                <option>El Salado</option>
-                                <option>Eduardo Santos</option>
-                                 <option>Antonio Nariño</option>
-                                <option>El Socorro</option>
-                                <option>La Gabriela</option>
-                            </optgroup>
-                            <optgroup label="Comuna 14 -El Poblado">
-                                <option>Barrio Colombia</option>
-                                <option>Simesa</option>
-                                <option>Villa Carlota</option>
-                                <option>Castropol</option>
-                                <option>Lalinde</option>
-                                <option>Las Lomas Nº 1</option>
-                                <option>Las Lomas Nº 2</option>
-                                <option>Altos del Poblado</option>
-                                <option>El Tesoro</option>
-                                <option>Los Naranjos</option>
-                                <option>Los Balsos Nº 1</option>
-                                <option>San Lucas</option>
-                                <option>El Diamante Nº 2</option>
-                                <option>El Castillo</option>
-                                <option>Los Balsos Nº 2</option>
-                                <option>Alejandría</option>
-                                <option>La Florida</option>
-                                <option>El Poblado</option>
-                                <option>Manila</option>
-                                <option>Astorga</option>
-                                <option>Patio Bonito</option>
-                                <option>La Aguacatala</option>
-                                <option>Santa Maria de Los Ángeles</option>
-                            </optgroup>
+                    <optgroup label="Comuna 11 -Laureles ESTADIO">
+                        <option>Carlos E. Restrepo</option>
+                        <option>Suramericana</option>
+                        <option>Naranjal</option>
+                        <option>San Joaquín</option>
+                        <option>Los Conquistadores</option>
+                        <option>Bolivariana</option>
+                        <option>Laureles</option>
+                        <option>Las Acacias</option>
+                        <option>La Castellana</option>
+                        <option>Lorena</option>
+                        <option>El Velódromo</option>
+                        <option>Estadio</option>
+                        <option>Los Colores</option>
+                        <option>Cuarta Brigada</option>
+                        <option>Florida Nueva</option>
+                    </optgroup>
+                    <optgroup label="Comuna 12 -La America">
+                        <option>Ferrini</option>
+                        <option>Calasanz</option>
+                        <option>Los Pinos</option>
+                        <option>La América</option>
+                        <option>La Floresta</option>
+                        <option>Santa Lucía</option>
+                        <option>El Danubio</option>
+                        <option>Campo Alegre</option>
+                        <option>Santa Mónica</option>
+                        <option>Barrio Cristóbal</option>
+                        <option>Simón Bolívar</option>
+                        <option>Santa Teresita</option>
+                        <option>Calasanz Parte Alta</option>
+                    </optgroup>
+                    <optgroup label="Comuna 13 -San Javier">
+                        <option>El Pesebre</option>
+                        <option>Blanquizal</option>
+                        <option>Santa Rosa de Lima</option>
+                        <option>Los Alcázares</option>
+                        <option>Metropolitano</option>
+                        <option>La Pradera</option>
+                        <option>Juan XIII - La Quiebra</option>
+                        <option>San Javier Nº 1</option>
+                        <option>San Javier Nº 2</option>
+                        <option>Veinte de Julio</option>
+                        <option>Belencito</option>
+                        <option>Betania</option>
+                        <option>El Corazón</option>
+                        <option>Las Independencias</option>
+                        <option>Nuevos Conquistadores</option>
+                        <option>El Salado</option>
+                        <option>Eduardo Santos</option>
+                        <option>Antonio Nariño</option>
+                        <option>El Socorro</option>
+                        <option>La Gabriela</option>
+                    </optgroup>
+                    <optgroup label="Comuna 14 -El Poblado">
+                        <option>Barrio Colombia</option>
+                        <option>Simesa</option>
+                        <option>Villa Carlota</option>
+                        <option>Castropol</option>
+                        <option>Lalinde</option>
+                        <option>Las Lomas Nº 1</option>
+                        <option>Las Lomas Nº 2</option>
+                        <option>Altos del Poblado</option>
+                        <option>El Tesoro</option>
+                        <option>Los Naranjos</option>
+                        <option>Los Balsos Nº 1</option>
+                        <option>San Lucas</option>
+                        <option>El Diamante Nº 2</option>
+                        <option>El Castillo</option>
+                        <option>Los Balsos Nº 2</option>
+                        <option>Alejandría</option>
+                        <option>La Florida</option>
+                        <option>El Poblado</option>
+                        <option>Manila</option>
+                        <option>Astorga</option>
+                        <option>Patio Bonito</option>
+                        <option>La Aguacatala</option>
+                        <option>Santa Maria de Los Ángeles</option>
+                    </optgroup>
 
-                            <optgroup label="Comuna 15 -Guayabal">
-                                <option>Tenche</option>
-                                <option>Trinidad</option>
-                                <option>Santa Fe</option>
-                                <option>Shellmar</option>
-                                <option>Lalinde</option>
-                                <option>Parque Juan Pablo II</option>
-                                <option>Campo Amor</option>
-                                <option>Noel</option>
-                                <option>Cristo Rey</option>
-                                <option>Guayabal</option>
-                                <option>La Colina</option>
-                            </optgroup>
+                    <optgroup label="Comuna 15 -Guayabal">
+                        <option>Tenche</option>
+                        <option>Trinidad</option>
+                        <option>Santa Fe</option>
+                        <option>Shellmar</option>
+                        <option>Lalinde</option>
+                        <option>Parque Juan Pablo II</option>
+                        <option>Campo Amor</option>
+                        <option>Noel</option>
+                        <option>Cristo Rey</option>
+                        <option>Guayabal</option>
+                        <option>La Colina</option>
+                    </optgroup>
 
-                            <optgroup label="Comuna 16 -Belen">
-                                <option>Fátima</option>
-                                <option>Rosales</option>
-                                <option>Belén</option>
-                                <option>Granada</option>
-                                <option>San Bernardo</option>
-                                <option>Las Playas</option>
-                                <option>Diego Echevarría</option>
-                                <option>La Mota</option>
-                                <option>La Hondonada</option>
-                                <option>El Rincón</option>
-                                <option>La Loma de Los Bernal</option>
-                                <option>La Gloria</option>
-                                <option>Altavista</option>
-                                <option>La Palma</option>
-                                <option>Los Alpes</option>
-                                <option>Las Violetas</option>
-                                <option>Las Mercedes</option>
-                                <option>Nueva Villa de Aburrá</option>
-                                <option>Miravalle</option>
-                                <option>El Nogal - Los Almendros</option>
-                                <option>Cerro Nutibara</option>
-                            </optgroup>
-                            </select>
-                    </p>
-                    <p class= "block">
-                       <label>Materiales/Elementos</label> 
-                        <textarea id="description" class="descrip" name="description" rows="2" placeholder= "Escribe los materiales que tienes para la recolección. ejemplo: Botellas plasticas, Aluminio, llantas, aceite, Libros, periocos"></textarea>
-                    </p>
-                    <p class="block">
-                        <button class="botonRecolectas">
-                            Recolectar
-                        </button>
-                    </p>
-                </form>
-            </div>
-            <div class="contact-info">
-                <p><a class="atras"  href="/links">No quiero crear Nada</a></p>
-                <h4 class="titulo2">Proceso de Creación</h4>
-                <ul class="infor">
-                    <p>Haces un pedido para que vayan a recoger los Elementos que tú reciclaste. Llenando la información que te pedimos.</p>
-                    <p>Puedes hacer tus preguntas por medio de:</p>
-                     <li><i class="fab fa-whatsapp"></i> +57 3246461388</li>
-                    <li><i class="fas fa-envelope-open-text"></i> cultura@renobas.com</li>
-                </ul>
-                <p class="info">Te contactaremos por mensaje, acordamos un día en específico y recolectamos tus materiales.</p>
-                <p class="info">!GRACIAS POR HACER PARTE DE LA CULTURA RENOBAS¡</p>
-                
-                
-            </div>
-        </div>
-        <script>
-             function validar() {
-                 //Aca aprendes. 
-                var title, encargado, tel, barrio, description, expresion;
-                title = document.getElementById("title").value;
-                encargado = document.getElementById("encargado").value;
-                tel = document.getElementById("tel").value;
-                barrio = document.getElementById("barrio").value;
-                description = document.getElementById("description").value;
+                    <optgroup label="Comuna 16 -Belen">
+                        <option>Fátima</option>
+                        <option>Rosales</option>
+                        <option>Belén</option>
+                        <option>Granada</option>
+                        <option>San Bernardo</option>
+                        <option>Las Playas</option>
+                        <option>Diego Echevarría</option>
+                        <option>La Mota</option>
+                        <option>La Hondonada</option>
+                        <option>El Rincón</option>
+                        <option>La Loma de Los Bernal</option>
+                        <option>La Gloria</option>
+                        <option>Altavista</option>
+                        <option>La Palma</option>
+                        <option>Los Alpes</option>
+                        <option>Las Violetas</option>
+                        <option>Las Mercedes</option>
+                        <option>Nueva Villa de Aburrá</option>
+                        <option>Miravalle</option>
+                        <option>El Nogal - Los Almendros</option>
+                        <option>Cerro Nutibara</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p class="block">
+                <label>Materiales/Elementos</label>
+                <textarea id="description" class="descrip" name="description" rows="2"
+                    placeholder="Escribe los materiales que tienes para la recolección. ejemplo: Botellas plasticas, Aluminio, llantas, aceite, Libros, periocos"></textarea>
+            </p>
+            <p class="block">
+                <button class="botonRecolectas">
+                    Recolectar
+                </button>
+            </p>
+        </form>
+    </div>
+    <div class="contact-info">
+        <p><a class="atras" href="/links">No quiero crear Nada</a></p>
+        <h4 class="titulo2">Proceso de Creación</h4>
+        <ul class="infor">
+            <p>Haces un pedido para que vayan a recoger los Elementos que tú reciclaste. Llenando la información que te
+                pedimos.</p>
+            <p>Puedes hacer tus preguntas por medio de:</p>
+            <li><i class="fab fa-whatsapp"></i> +57 3246461388</li>
+            <li><i class="fas fa-envelope-open-text"></i> cultura@renobas.com</li>
+        </ul>
+        <p class="info">Te contactaremos por mensaje, acordamos un día en específico y recolectamos tus materiales.</p>
+        <p class="info">!GRACIAS POR HACER PARTE DE LA CULTURA RENOBAS¡</p>
 
-                if(title === "" || encargado === "" || tel === "" || barrio === ""|| description === ""){
-                swal.fire({
-                    title:"FALTAN",
-                    text: "DATOS POR LLENAR",
-                    timer: 3000,
-                    showConfirmButton: false
-                    })
-                    return false;
-                }
-                else if(encargado.length>30){
-                    swal.fire({
-                    title:"Nombre",
-                    text: "ES MUY EXTENSO",
-                    timer: 3000,
-                    showConfirmButton: false
-                    })
-                    return false;
-                }
-                else if(tel.length>10 || tel.length<7){
-                    swal.fire({
-                    title:"Teléfono",
-                    text: "NO ES VALIDO",
-                    timer: 3000,
-                    showConfirmButton: false
-                    })
-                    return false;
-                }
-                else if(isNaN(tel)){
-                swal.fire({
-                    title:"Teléfono",
-                    text: "NO ES VALIDO",
-                    timer: 3000,
-                    showConfirmButton: false
-                    })
-                    return false;
-                }
-            }
-        </script>
-        
 
+    </div>
+</div>
+<script>
+    function validar() {
+        //Aca aprendes. 
+        var title, encargado, tel, barrio, description, expresion;
+        title = document.getElementById("title").value;
+        encargado = document.getElementById("encargado").value;
+        tel = document.getElementById("tel").value;
+        barrio = document.getElementById("barrio").value;
+        description = document.getElementById("description").value;
+
+        if (title === "" || encargado === "" || tel === "" || barrio === "" || description === "") {
+            swal.fire({
+                title: "FALTAN",
+                text: "DATOS POR LLENAR",
+                timer: 3000,
+                showConfirmButton: false
+            })
+            return false;
+        }
+        else if (encargado.length > 30) {
+            swal.fire({
+                title: "Nombre",
+                text: "ES MUY EXTENSO",
+                timer: 3000,
+                showConfirmButton: false
+            })
+            return false;
+        }
+        else if (tel.length > 10 || tel.length < 7) {
+            swal.fire({
+                title: "Teléfono",
+                text: "NO ES VALIDO",
+                timer: 3000,
+                showConfirmButton: false
+            })
+            return false;
+        }
+        else if (isNaN(tel)) {
+            swal.fire({
+                title: "Teléfono",
+                text: "NO ES VALIDO",
+                timer: 3000,
+                showConfirmButton: false
+            })
+            return false;
+        }
+    }
+</script>

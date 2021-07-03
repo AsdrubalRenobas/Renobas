@@ -1,20 +1,21 @@
+<!-- Barra Superior(NavBar) -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark menu">
-    <div class="container">  
-  
+  <div class="container">
     <a class="navbar-brand ti" href="/">
-       Renobas
+      Renobas
     </a>
-    <button class="navbar-toggler but" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-      aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler but" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
+        <!-- Cambio cuando un usuario esta logueado -->
         {{#if user}}
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-          Recolectas
+            Recolectas
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="/links">Todas mis Recolectas</a>
@@ -28,6 +29,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/logout">Salir</a>
         </li>
+        <!-- Cambio cuando un usuario no esta logueado -->
         {{else}}
         <li class="nav-item">
           <a class="nav-link" href="/signin">Ingresar</a>
@@ -36,8 +38,7 @@
           <a class="nav-link" href="/signup">Registrarse</a>
         </li>
         {{/if}}
-
       </ul>
     </div>
-   </div>
+  </div>
 </nav>

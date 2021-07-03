@@ -1,9 +1,9 @@
 /**
- * Reading Environment Variables
+ * Lectura de variables de entorno
  */
 import { config } from "dotenv";
 config();
-
+//Configuración de base de datos
 export default {
   database: {
     connectionLimit: 1000,
@@ -12,5 +12,6 @@ export default {
     password: process.env.DATABASE_PASSWORD || "",
     database: process.env.DATABASE_NAME || "dblinks",
   },
+  //Puerto en donde se inicializara
   port: process.env.PORT || 4000,
 };

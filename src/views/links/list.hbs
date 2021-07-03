@@ -1,68 +1,77 @@
+<!-- Vista Para Listar Recolectas -->
 <div class="container p-4">
     <div class="row">
+        <!-- Cada Recolecta -->
         {{#each links}}
-            <div class="col-md-12 contendoresInfo">
-                <div class="card text-center border-light" >
-                    <div class="card-body">
-                            <h3 class="card-title text-uppercase titulo1">
-                                    {{title}}
-                            </h3>
-                        <p>La persona encargada es {{encargado}}</p>
-                        <p>El teléfono es el {{tel}}</p>
-                        <p>La ubicación del pedido es en {{barrio}}</p>
-                        <p>Los elementos son: {{description}}</p>
-                        <!-- Esto dice la los momentos en que se realizo la recolecta <p class="m-2">{{timeago created_at}}</p> -->
-                       
-                        <a href="/links/delete/{{id}}" id="delete-bt" class="btn bg-primary text-white borrar" onclick="return ConfirmDelete();">Borrar</a>
-                        <a href="/links/edit/{{id}}" class="btn bg-secondary text-white editar">Editar</a>
-                    </div>   
+        <div class="col-md-12 contendoresInfo">
+            <div class="card text-center border-light">
+                <div class="card-body">
+                    <h3 class="card-title text-uppercase titulo1">
+                        <!-- Trae la información de cada uno de los datos registrados -->
+                        {{title}}
+                    </h3>
+                    <p>La persona encargada es {{encargado}}</p>
+                    <p>El teléfono es el {{tel}}</p>
+                    <p>La ubicación del pedido es en {{barrio}}</p>
+                    <p>Los elementos son: {{description}}</p>
+                    <!-- Esto dice la los momentos en que se realizo la recolecta <p class="m-2">{{timeago created_at}}</p> -->
+                    <!-- Botones de acciones a realizar en cada recolecta -->
+                    <a href="/links/delete/{{id}}" id="delete-bt" class="btn bg-primary text-white borrar"
+                        onclick="return ConfirmDelete();">Borrar</a>
+                    <a href="/links/edit/{{id}}" class="btn bg-secondary text-white editar">Editar</a>
                 </div>
             </div>
-             <div class="containeInfo">
-                    <input type="checkbox" id="btn-mas">
-                        <div class="redes">
-                            <div class="Infomar">
-                                <h3>Proceso de recolecta</h3>
-                                    <p>Acá puedes observar tus recolectas pedidas antes de que Renobas vaya por ellas. Te mostramos los datos que digitaste para que Renobas te Contacte y poder recolectarlas.</p>
-                                    <img src="img/recole.svg" width="370px">
-                            </div>
-                        </div>
-                    <div class="btn-mas">
-                        <label for="btn-mas" class="fa fa-info"></label>
-                    </div>
+        </div>
+        <!-- Ventana emergente al crear una recolecta -->
+        <div class="containeInfo"> 
+            <input type="checkbox" id="btn-mas">
+            <div class="redes">
+                <div class="Infomar">
+                    <h3>Proceso de recolecta</h3>
+                    <p>Acá puedes observar tus recolectas pedidas antes de que Renobas vaya por ellas. Te mostramos los
+                        datos que digitaste para que Renobas te Contacte y poder recolectarlas.</p>
+                    <img src="img/recole.svg" width="370px">
                 </div>
-        
+            </div>
+            <div class="btn-mas">
+                <label for="btn-mas" class="fa fa-info"></label>
+            </div>
+        </div>
+
         {{else}}
-            <div class="col-md-6 mx-auto noHay">
-                <div class="card card-body bg-dark text-white text-center">
-                    <p>No hay Elementos reciclados</p>
-                    <a href="/links/add" style="color:rgb(252, 252, 252)" class="una">¡RECOLECTA UNA!</a>
+        <div class="col-md-6 mx-auto noHay">
+            <div class="card card-body bg-dark text-white text-center">
+                <!-- Boton cuando no hay ninguna recolecta -->
+                <p>No hay Elementos reciclados</p>
+                <a href="/links/add" style="color:rgb(252, 252, 252)" class="una">¡RECOLECTA UNA!</a>
+            </div>
+        </div>
+        <!-- Ventana emergente al no habes ninguna recolecta -->
+        <div class="containeInfo">
+            <input type="checkbox" id="btn-mas">
+            <div class="redes">
+                <div class="Infomar">
+                    <h3>Proceso de recolecta</h3>
+                    <p>Primero debes realizar UNA. Presionando en ¡RECOLECTA UNA!, llena la información y presiona en
+                        RECOLECTAR, allí se mostrará tú recolecta pedida.</p>
+                    <img src="img/antesRe.svg" width="340px">
                 </div>
             </div>
-               <div class="containeInfo">
-                    <input type="checkbox" id="btn-mas">
-                    <div class="redes">
-                       <div class="Infomar">
-                          <h3>Proceso de recolecta</h3>
-                            <p>Primero debes realizar UNA. Presionando en ¡RECOLECTA UNA!, llena la información y presiona en RECOLECTAR, allí se mostrará tú recolecta pedida.</p>
-                             <img src="img/antesRe.svg" width="340px">
-                       </div>
-                    </div>
-                    <div class="btn-mas">
-                        <label for="btn-mas" class="fa fa-info"></label>
-                    </div>
-                </div>
-        {{/each}}  
+            <div class="btn-mas">
+                <label for="btn-mas" class="fa fa-info"></label>
+            </div>
+        </div>
+        {{/each}}
     </div>
 </div>
 <script>
     function ConfirmDelete() {
         //Igual Acá
-            var  respuesta = confirm("Estas seguro que deseas eliminar tu recolecta");
-            if(respuesta == true){
-                return true;
-            }else{
-                return false;
-            }
+        var respuesta = confirm("Estas seguro que deseas eliminar tu recolecta");
+        if (respuesta == true) {
+            return true;
+        } else {
+            return false;
         }
+    }
 </script>
