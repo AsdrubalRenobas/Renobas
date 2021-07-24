@@ -12,13 +12,15 @@
                     </h3>
                     <p>La persona encargada es {{encargado}}</p>
                     <p>El teléfono es el {{tel}}</p>
-                    <p>La ubicación del pedido es en {{barrio}}</p>
+                    <p>La direcció de la recolecta es en la {{barrio}}</p>
                     <p>Los elementos son: {{description}}</p>
                     <!-- Esto dice la los momentos en que se realizo la recolecta <p class="m-2">{{timeago created_at}}</p> -->
                     <!-- Botones de acciones a realizar en cada recolecta -->
-                    <a href="/links/delete/{{id}}" id="delete-bt" class="btn bg-primary text-white borrar"
-                        onclick="return ConfirmDelete();">Borrar</a>
-                    <a href="/links/edit/{{id}}" class="btn bg-secondary text-white editar">Editar</a>
+                    <a  class="btn bg-primary text-white borrar" href="javascript:void(0)" onclick="window.location.href='/links/delete/{{id}}'" id="delete-bt">Borrar</a>
+                     <!-- <a href="/links/delete/{{id}}" id="delete-bt" class="btn bg-primary text-white borrar" onclick="return ConfirmDelete();">Borrar</a> -->
+                    <a  class="btn bg-secondary text-white editar" href="javascript:void(0)" onclick="window.location.href='/links/edit/{{id}}'">Editar</a>
+                    <!--<a href="/links/edit/{{id}}" class="btn bg-secondary text-white editar">Editar</a> -->
+                    
                 </div>
             </div>
         </div>
@@ -43,7 +45,9 @@
             <div class="card card-body bg-dark text-white text-center">
                 <!-- Boton cuando no hay ninguna recolecta -->
                 <p>No hay Elementos reciclados</p>
-                <a href="/links/add" style="color:rgb(252, 252, 252)" class="una">¡RECOLECTA UNA!</a>
+                <a class="fancybox etc etc etc" href="javascript:void(0)" onclick="window.location.href='/links/add'"  style="color:rgb(252, 252, 252)" class="una">¡RECOLECTA UNA!</a>
+               
+                <!--  <a href="/links/add" style="color:rgb(252, 252, 252)" class="una">¡RECOLECTA UNA!</a>ta -->
             </div>
         </div>
         <!-- Ventana emergente al no habes ninguna recolecta -->
