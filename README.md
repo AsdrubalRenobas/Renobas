@@ -1,4 +1,4 @@
-# Notes App with Nodejs and Mysql
+# Notas de recursos de Página web Renobas
 
 Recurso de Código aplicación Web, llamada Renobas. 
 
@@ -10,7 +10,7 @@ Recurso de Código aplicación Web, llamada Renobas.
 ![](docs/6creacion.png)
 ![](docs/7lista.png)
 
-### Installation
+### Instalción
 ```
 mysql -u MYUSR "-pMYPASSWORD" < ./database/db.sql # create database
 npm i
@@ -18,7 +18,7 @@ npm run build
 npm start
 ```
 
-## File Structure
+## Estructura de archivos
 
 - database, it the folder with all the sql queries, you can use to recreate the database for this application
 - src, it's all the code for the Backend and Frontend Application
@@ -28,11 +28,11 @@ npm start
 
 - PORT
 
-## Versions of this Project
+## Versiones de Renobas
 
 - [version-2021]
 
-## Todo
+## Todo los recursos Usados
 
 1. [x] Registro de usuarios en BD(Mysql)
 1. [x] Componentes de Bootstrap
@@ -43,11 +43,10 @@ npm start
 1. [x] Links WhatsApp, Instagram, Twitter, Correo Corporativo
 1. [x] Sesiones
 1. [x] Imagenes SVG
-1. [x] Imagenes SVG
 
 
 
-## Tools
+## Herramientas
 
 - Nodejs
 - Mysql
