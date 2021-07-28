@@ -10,7 +10,7 @@ Recurso de Código aplicación Web, llamada Renobas.
 ![](docs/6creacion.png)
 ![](docs/7lista.png)
 
-### Instalción
+### Instalación
 ```
 mysql -u MYUSR "-pMYPASSWORD" < ./database/db.sql # create database
 npm i
