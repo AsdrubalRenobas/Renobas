@@ -2,6 +2,7 @@
 
 Recurso de Código aplicación Web, llamada Renobas. 
 
+![](docs/0.png)
 ![](docs/1inicio.png)
 ![](docs/2login.png)
 ![](docs/3registro.png)
