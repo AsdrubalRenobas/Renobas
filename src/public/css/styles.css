@@ -80,10 +80,11 @@ header .textos-header{
   position: absolute;
   bottom: 0;
   width: 100%;
-  height:15vh;
+  height:2vh;
   margin-bottom:-1.232394366197183vh; /*Fix for safari gap*/
-  min-height:17.6056338028169vh;
-  max-height:26.408450704225352vh;
+  /*Altura de las olas*/
+  min-height:10vh;
+  max-height:20vh;
 }
 .parallax > use {
   animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
