@@ -133,8 +133,8 @@ main .sobre-nosotros{
   justify-content: space-evenly;
 }
 .imagen-about-us{
-  background-image: url("../img/up.svg");
-  width: 35%;
+  background-image: url("../img/inicio.svg");
+  width: 38%;
   
   background-size: cover;
 }
@@ -1231,13 +1231,13 @@ label{
 }
 
 .atras{
-  color: #fff;
+  color: #0e85d4;
 }
 .atras:hover{
   transform: scale(1.2);
   transition: all 0.3s ease;
   text-decoration: none;
-  color: #0C63E0;
+  color: #e00c0c;
 }
 
 .targeta{
