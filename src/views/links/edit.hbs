@@ -28,7 +28,7 @@
             <p>
                 <label>Número telefónico</label>
                 <input type="text" name="tel" id="tel" class="tel"
-                    placeholder="{{link.tel}} Era el número de {{link.encargado}}" value="{{link.tel}}">
+                    placeholder="{{link.tel}} Era el celular de {{link.encargado}}" value="{{link.tel}}">
             </p>
            <p>
                 <label>Dirección</label>
@@ -90,9 +90,9 @@
             })
             return false;
         }
-        else if (tel.length > 10 || tel.length < 7) {
+        else if (tel.length != 10) {
             swal.fire({
-                title: "Teléfono",
+                title: "Celular",
                 text: "NO ES VALIDO",
                 timer: 3000,
                 showConfirmButton: false

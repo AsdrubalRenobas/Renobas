@@ -22,7 +22,7 @@
             <p>
                 <label>Número telefónico</label>
                 <input id="tel" type="text" name="tel" class="tel"
-                    placeholder="Teléfono o Celular de la persona encargada">
+                    placeholder="Celular de la persona encargada">
             </p>
             <p>
                 <label>Dirección</label>
@@ -85,9 +85,9 @@
             })
             return false;
         }
-        else if (tel.length > 10 || tel.length < 7) {
+        else if (tel.length != 10) {
             swal.fire({
-                title: "Teléfono",
+                title: "Celular",
                 text: "NO ES VALIDO",
                 timer: 3000,
                 showConfirmButton: false
