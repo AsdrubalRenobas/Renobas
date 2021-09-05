@@ -58,6 +58,8 @@ header {
   
 }
 
+
+
 header .textos-header{
   display: flex;
   height: 75.70422535211267vh;
@@ -1127,11 +1129,18 @@ label{
 }
 
 
-.containeRedes{
-  position: fixed;
-  bottom: 3.5211267605633805vh;
-  right: 3.5211267605633805vh;
+.redesSociales{
+  color: white;
+  text-decoration: none;
+  font-size: 6.049295774647887vh;
+  transition: all 500ms ease;
+  margin-right: 5%;
 }
+
+.redesSociales:hover{
+  text-decoration: none;
+}
+
 .redes a, .btn-mas label{
   display: block;
   text-decoration: none;
@@ -1327,6 +1336,9 @@ label{
   .contenido-slider2 h2{
       font-size: 3.68vh;
   }
+  .redesSociales{
+    font-size: 3.68vh;
+  }
 }
   
 
@@ -1354,4 +1366,6 @@ label{
 .slideright { float:right; } 
 
 /*Slider */
+
+
 
