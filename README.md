@@ -16,7 +16,7 @@ Recurso de Código aplicación Web, llamada Renobas.
 mysql -u MYUSR "-pMYPASSWORD" < ./database/db.sql # create database
 npm i
 npm run build
-npm start
+npm run dev
 ```
 
 ## Estructura de archivos
@@ -44,6 +44,7 @@ npm start
 1. [x] Links WhatsApp, Instagram, Twitter, Correo Corporativo
 1. [x] Sesiones
 1. [x] Imagenes SVG
+1. [x] Atención al usuario
 
 
 
