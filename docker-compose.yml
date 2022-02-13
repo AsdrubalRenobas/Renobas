@@ -5,7 +5,7 @@ services:
     image: node
     container_name: linksweb
     ports: 
-      - "4000:4000"
+      - "3306:3306"
     volumes: 
       - .:/app
     environment: 
@@ -28,7 +28,7 @@ services:
       driver: none
     environment: 
       - MYSQL_DATABASE=dblinks
-      - MYSQL_USER="henry"
+      - MYSQL_USER="administrador"
       - MYSQL_PASSWORD="secret"
       - MYSQL_ROOT_PASSWORD="secret"
 
