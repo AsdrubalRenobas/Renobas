@@ -5,7 +5,7 @@ services:
     image: node
     container_name: linksweb
     ports: 
-      - "3306:3306"
+      - "4000:4000"
     volumes: 
       - .:/app
     environment: 
