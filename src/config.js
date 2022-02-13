@@ -13,5 +13,5 @@ export default {
     database: process.env.DATABASE_NAME || "dblinks",
   },
   //Puerto en donde se inicializara
-  port: process.env.PORT || 3306,
+  port: process.env.PORT || 4000,
 };
