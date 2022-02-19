@@ -7,6 +7,8 @@ import {
   renderSignIn,
   signIn,
   logout,
+  renderChange,
+  ChangePass,
 } from "../controllers/auth.controller";
 
 // Registro
@@ -16,6 +18,10 @@ router.post("/signup", signUp);
 // Inicio de Sesion
 router.get("/signin", renderSignIn);
 router.post("/signin", signIn);
+
+// CHANGE
+router.get("/change", renderChange);
+router.post("/change", ChangePass);
 
 //Salir
 router.get("/logout", logout);
