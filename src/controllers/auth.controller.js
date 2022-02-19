@@ -34,7 +34,7 @@ authCtrl.renderChange = (req, res, next) => {
 };
 
 authCtrl.ChangePass = passport.authenticate('local.change', {
-    successRedirect: '/signin',
+    successRedirect: '/profile',
     failureRedirect: '/change',
     failureFlash: true
 });
