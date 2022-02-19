@@ -64,3 +64,33 @@ passport.use('local.signin', new LocalStrategy({
   }
 }));
 
+
+//Seleccionar en la base de datos registrados cambio clave
+passport.deserializeUser(async (id, done) => {
+  const rows = await pool.query("SELECT * FROM users WHERE id = ?", [id]);
+  done(null, rows[0]);
+});
+//Inicar Sesion o dar las alertas de error
+passport.use('local.change', new LocalStrategy({
+  usernameField: 'username',
+  passwordField: 'pass',
+  passReqToCallback: true
+}, async (req, username, pass, done) => {
+  const rows = await pool.query('SELECT * FROM users WHERE username = ?', [username]);
+  if (rows.length > 0) {
+    const user = rows[0];
+    const validPass = await helpers.matchPassword(pass, user.pass);
+    if (validPass) {
+      const { pass2 } = req.body;
+      const nueva = await helpers.encryptPassword(pass2);
+      console.log(nueva)
+      // Guardando en la base de datos registrados
+      const result = await pool.query("UPDATE users SET pass = ? WHERE username = ?", [nueva, username]);
+      done(null, user, req.flash('success', "Has cambiado tu clave"));
+    } else {
+      done(null, false, req.flash('message', 'Clave Incorrecta'));
+    }
+  } else {
+    return done(null, false, req.flash('message', 'El usuario no existe'));
+  }
+}));
