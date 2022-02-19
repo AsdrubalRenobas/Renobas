@@ -23,6 +23,9 @@ router.post("/signin", signIn);
 router.get("/change", renderChange);
 router.post("/change", ChangePass);
 
+router.get("/recover", renderRecover);
+router.post("/recover", recoPass);
+
 //Salir
 router.get("/logout", logout);
 
