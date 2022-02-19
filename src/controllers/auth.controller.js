@@ -25,6 +25,25 @@ authCtrl.signIn = passport.authenticate('local.signin', {
     failureFlash: true
 });
 
+
+
+
+//cambio clave
+authCtrl.renderChange = (req, res, next) => {
+    res.render('auth/change');
+};
+
+authCtrl.ChangePass = passport.authenticate('local.change', {
+    successRedirect: '/signin',
+    failureRedirect: '/change',
+    failureFlash: true
+});
+
+
+
+
+
+
 //Pantalla principal
 authCtrl.logout = (req, res, next) => {
     req.logOut();
