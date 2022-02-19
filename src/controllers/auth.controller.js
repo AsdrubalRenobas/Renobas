@@ -26,8 +26,6 @@ authCtrl.signIn = passport.authenticate('local.signin', {
 });
 
 
-
-
 //cambio clave
 authCtrl.renderChange = (req, res, next) => {
     res.render('auth/change');
@@ -39,9 +37,16 @@ authCtrl.ChangePass = passport.authenticate('local.change', {
     failureFlash: true
 });
 
+//Generar clave
+authCtrl.renderRecover = (req, res, next) => {
+    res.render('auth/recover');
+};
 
-
-
+authCtrl.recoPass = passport.authenticate('local.recover', {
+    successRedirect: '/signin',
+    failureRedirect: '/recover',
+    failureFlash: true
+});
 
 
 //Pantalla principal
