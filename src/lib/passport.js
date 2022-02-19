@@ -94,3 +94,31 @@ passport.use('local.change', new LocalStrategy({
     return done(null, false, req.flash('message', 'El usuario no existe'));
   }
 }));
+
+passport.serializeUser((user, done) => {
+  done(null, user.id);
+});
+//Seleccionar en la base de datos registrados
+passport.deserializeUser(async (id, done) => {
+  const rows = await pool.query("SELECT * FROM users WHERE id = ?", [id]);
+  done(null, rows[0]);
+});
+//Inicar Sesion o dar las alertas de error
+passport.use('local.recover', new LocalStrategy({
+  usernameField: 'username',
+  passwordField: 'email',
+  passReqToCallback: true
+}, async (req, username, email, done) => {
+  const rows = await pool.query('SELECT id FROM users WHERE username = ? AND email = ?', [username, email]);
+  if (rows.length > 0) {
+    const user = rows[0];
+    var aleatorio = Math.round(Math.random() * 10000);
+    var clave = aleatorio.toString();
+    const nueva = await helpers.encryptPassword(clave);
+    console.log(nueva)
+    const result = await pool.query("UPDATE users SET pass = ? WHERE username = ?", [nueva, username]);
+    done(null, user, req.flash('success', "Se te generó ", [clave], " Como clave, cámbiala por tu seguridad"));
+  } else {
+    return done(null, false, req.flash('message', 'El usuario no existe'));
+  }
+}));
