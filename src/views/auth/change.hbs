@@ -1,0 +1,69 @@
+<!-- Lado Izquierdo de la vista-->
+<div class="split-screen">
+  
+  <!-- Lado Derecho de la vista-->
+  <div class="right">
+    <form class="login2" action="/change" method="POST" onsubmit="return empieza();">
+      <section class="copy">
+        <h2>Cambia tu contraseña</h2>
+      </section>
+      <!-- Inputs para el ingreso -->
+      <div class="input-container name">
+        <label for="fname">Usuario</label>
+        <input id="usuario" name="username" type="text" placeholder="Recuerda tu Usuario">
+      </div>
+      <div class="input-container password">
+        <label for="password">Clave</label>
+        <input id="clave" name="pass" type="password" placeholder="Clave Actual">
+        <i><span style="cursor:pointer">Mostrar</span></i>
+      </div>
+
+      <div class="input-container password">
+        <label for="password">Clave Nueva</label>
+        <input id="clave2" name="pass2" type="password" placeholder="Ingresa la nueva clave">
+        <i><span style="cursor:pointer">Mostrar</span></i>
+      </div>
+      <button class="btnLogin">Cambiar</button>
+    </form>
+     
+  </div>
+  <div class="left">
+    <section class="copy">
+      <h1>Cambia tu contraseña</h1>
+    </section>
+  </div>
+ 
+</div>
+
+<script>
+  $(document).ready(function () {
+    $('[data-toggle="popover"]').popover();
+  });
+
+  document.querySelector('.password span').addEventListener('click', e => {
+    const passwordInput = document.querySelector('#clave');
+    if (e.target.classList.contains('show')) {
+      e.target.classList.remove('show');
+      e.target.textContent = 'Ocultar';
+      passwordInput.type = 'text';
+    } else {
+      e.target.classList.add('show');
+      e.target.textContent = 'Mostrar';
+      passwordInput.type = 'password';
+    }
+  });
+  function empieza() {
+    var usuario, clave, correo, expresion;
+    usuario = document.getElementById("usuario").value;
+    clave = document.getElementById("clave").value;
+    if (usuario === "" || clave === "") {
+      swal.fire({
+        title: "Error",
+        text: "Todos los campos son obligatorios",
+        timer: 3000,
+        showConfirmButton: false
+      });
+      return false;
+    }
+  }
+</script>
