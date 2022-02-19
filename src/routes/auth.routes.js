@@ -9,6 +9,8 @@ import {
   logout,
   renderChange,
   ChangePass,
+  renderRecover,
+  recoPass,
 } from "../controllers/auth.controller";
 
 // Registro
